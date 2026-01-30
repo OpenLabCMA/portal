@@ -238,21 +238,24 @@ body {
     }
 
     .top-bar {
-        height: auto;
-        padding: 8px 0;
+        height: 52px;
+        padding: 6px 0;
+        display: flex;
+        align-items: center;
     }
 
     .top-bar .logo img {
-        height: 40px;
+        height: 36px;
         margin-left: 8px;
     }
 
     .top-bar-title {
         font-size: 18px;
+        margin: 0;
     }
 
     .top-tabs {
-        top: 56px;
+        top: 52px;
         left: 0;
         width: 100%;
         padding: 4px 8px;
@@ -331,19 +334,20 @@ body {
 
 @media (max-width: 480px) {
     .top-bar {
-        padding: 6px 0;
+        height: 44px;
+        padding: 4px 0;
     }
 
     .top-bar .logo img {
-        height: 32px;
+        height: 30px;
     }
 
     .top-bar-title {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .top-tabs {
-        top: 48px;
+        top: 44px;
         padding: 2px 4px;
     }
 
