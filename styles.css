@@ -146,6 +146,8 @@ body {
     z-index: var(--z-tab-content);
     opacity: 1;
     transition: opacity 0.25s ease;
+    overflow-y: auto;
+    padding-bottom: 80px;
 }
 
 .tab-panel p.fade-out {
