@@ -3,22 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	const tabs = Array.from(document.querySelectorAll('.top-tabs [role="tab"]'));
 	const panels = Array.from(document.querySelectorAll('.tab-panel'));
 
-	// Position panels directly under the visible .top-tabs element
-	function positionPanels() {
+	// Position tabs below top bar, and panels below tabs
+	function positionElements() {
+		const topBar = document.querySelector('.top-bar');
 		const topTabs = document.querySelector('.top-tabs');
-		if (!topTabs) return;
-		const rect = topTabs.getBoundingClientRect();
-		// rect.bottom is viewport coordinate; panels are fixed, so use it directly
-		const topPx = Math.ceil(rect.bottom);
+		if (!topBar || !topTabs) return;
+
+		// Position tabs right below the top bar
+		const barRect = topBar.getBoundingClientRect();
+		topTabs.style.top = Math.ceil(barRect.bottom) + 'px';
+
+		// Position panels right below the tabs
+		const tabsRect = topTabs.getBoundingClientRect();
+		const topPx = Math.ceil(tabsRect.bottom);
 		panels.forEach(p => {
 			p.style.top = topPx + 'px';
 		});
 	}
 
 	// update on load and when viewport changes
-	window.addEventListener('resize', positionPanels);
-	window.addEventListener('orientationchange', positionPanels);
-	window.addEventListener('load', positionPanels);
+	window.addEventListener('resize', positionElements);
+	window.addEventListener('orientationchange', positionElements);
+	window.addEventListener('load', positionElements);
 
 	function getRandomTurtleImage() {
 		const turtles = ['turtl1.png', 'turtl2.png', 'turtl3.png'];
@@ -75,5 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (defaultTab) activate('intro');
 
 	// position panels after initial render
-	positionPanels();
+	positionElements();
 });
