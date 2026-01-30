@@ -233,8 +233,8 @@ body {
         background-attachment: scroll;
     }
 
-    .tab-panel::before {
-        background-image: none;
+    body::before {
+        background-image: linear-gradient(135deg, rgba(177, 190, 229, 0.6), rgba(200, 180, 220, 0.5));
     }
 
     .top-bar {
@@ -242,38 +242,62 @@ body {
         padding: 8px 0;
     }
 
+    .top-bar .logo img {
+        height: 40px;
+        margin-left: 8px;
+    }
+
+    .top-bar-title {
+        font-size: 18px;
+    }
+
     .top-tabs {
-        top: 60px;
+        top: 56px;
         left: 0;
         width: 100%;
-        padding: 0 8px;
+        padding: 4px 8px;
         overflow-x: auto;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .top-tabs [role="tablist"] {
+        display: flex;
+        flex-wrap: nowrap;
         gap: 4px;
     }
 
     .top-tabs .tab {
         margin-right: 0;
         padding: 6px 10px;
-        font-size: 14px;
+        font-size: 13px;
         white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .tab-panel {
-        top: 120px;
-        height: calc(100% - 180px);
+        position: fixed;
+        top: 100px;
+        bottom: 48px;
+        height: auto;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .tab-panel p {
-        width: 100%;
+        position: static;
+        width: auto;
         height: auto;
         padding: 20px;
         margin: 0;
         font-size: 16px;
-        background-position: center center;
-        background-size: 60%;
+        line-height: 1.6;
+        white-space: pre-line;
+        background-image: none !important;
+        overflow-y: visible;
+        padding-bottom: 20px;
     }
 
     .gallery {
@@ -283,68 +307,59 @@ body {
         height: auto;
     }
 
+    .report-btn {
+        right: 16px;
+        bottom: 56px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
     .bottom-bar {
         padding: 8px;
-        height: 60px;
+        height: auto;
+        min-height: 40px;
         display: flex;
         align-items: center;
     }
 
     .bottom-bar img {
-        height: 40px;
-        width: auto;
+        height: 0;
+        width: 0;
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        background-image: none;
-        background-color: #f0f0f0;
-    }
-
-    .tab-panel::before {
-        background-image: none;
-    }
-
-    .top-bar .logo {
-        padding: 6px 8px;
-        font-size: 14px;
+    .top-bar {
+        padding: 6px 0;
     }
 
     .top-bar .logo img {
-        height: 14px;
+        height: 32px;
+    }
+
+    .top-bar-title {
+        font-size: 16px;
     }
 
     .top-tabs {
-        top: 50px;
-        padding: 0 4px;
+        top: 48px;
+        padding: 2px 4px;
     }
 
     .top-tabs .tab {
-        padding: 4px 8px;
+        padding: 5px 8px;
         font-size: 12px;
     }
 
-    .lang-switch {
-        top: 10px;
-        right: 4px;
-    }
-
-    .lang-switch button.toggle {
-        padding: 3px 6px;
-        font-size: 10px;
-    }
-
     .tab-panel {
-        top: 100px;
-        height: calc(100% - 150px);
+        top: 84px;
+        bottom: 40px;
     }
 
     .tab-panel p {
-        padding: 15px;
-        font-size: 14px;
-        background-position: center center;
-        background-size: 70%;
+        padding: 16px;
+        font-size: 15px;
     }
 
     .gallery {
@@ -353,12 +368,15 @@ body {
         padding: 12px;
     }
 
-    .bottom-bar {
-        padding: 6px;
-        height: 50px;
+    .report-btn {
+        right: 12px;
+        bottom: 48px;
+        padding: 8px 14px;
+        font-size: 13px;
     }
 
-    .bottom-bar img {
-        height: 32px;
+    .bottom-bar {
+        padding: 6px;
+        min-height: 32px;
     }
 }
