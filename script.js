@@ -44,9 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (isActive) {
 				p.hidden = false;
 				if (pText) {
-					// Randomly select turtl1-2-3 image for specific tabs
+					// Randomly select turtl1-2-3 image for specific tabs.
 					if (['intro', 'guidelines', 'staff'].includes(id)) {
-						pText.style.backgroundImage = `url(images/${getRandomTurtleImage()})`;
+					const turtleUrl = `url(images/${getRandomTurtleImage()})`;
+					p.style.backgroundImage = 'none';
+					p.style.setProperty('--turtle-image', turtleUrl);
+				} else {
+					p.style.backgroundImage = 'none';
+					p.style.setProperty('--turtle-image', 'none');
 					}
 					pText.classList.add('fade-out');
 					// Force reflow to trigger transition from opacity 0 to 1
@@ -58,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (pText) {
 					pText.classList.add('fade-out');
 				}
+				// remove panel bg image for non-active tab
+				p.style.backgroundImage = 'none';
+				p.style.setProperty('--turtle-image', 'none');
 				// Wait for fade-out animation to complete before hiding
 				setTimeout(() => {
 					p.hidden = true;

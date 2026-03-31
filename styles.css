@@ -126,6 +126,30 @@ body {
     z-index: var(--z-panel);
     width: 100%;
     animation: bgFadeIn 1.5s ease-in forwards;
+    background: none;
+    --turtle-image: none;
+    background-repeat: no-repeat;
+    background-position: right 2% bottom 50%;
+    background-size: 25%;
+    background-color: transparent;
+}
+
+.tab-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--turtle-image);
+    background-repeat: inherit;
+    background-position: inherit;
+    background-size: inherit;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tab-panel > p {
+    position: relative;
+    z-index: 2;
 }
 
 .tab-panel p {
@@ -139,9 +163,6 @@ body {
     line-height: 1.5;
     white-space: pre-wrap;
     background: transparent;
-    background-repeat: no-repeat;
-    background-position: right 2% bottom 50%;
-    background-size: 25%;
     box-sizing: border-box;
     z-index: var(--z-tab-content);
     opacity: 1;
@@ -233,7 +254,6 @@ body {
 @media (max-width: 768px) {
     body {
         background-image: none;
-        background-color: #f0f0f0;
         background-size: 200% auto;
         background-attachment: scroll;
     }
@@ -263,10 +283,11 @@ body {
         top: 52px;
         left: 0;
         width: 100%;
-        padding: 4px 8px;
+        padding: 5px 5px;
         overflow-x: auto;
         display: flex;
         flex-wrap: nowrap;
+        font-size: 18px;
         gap: 4px;
         -webkit-overflow-scrolling: touch;
     }
@@ -280,7 +301,7 @@ body {
     .top-tabs .tab {
         margin-right: 0;
         padding: 6px 10px;
-        font-size: 13px;
+        font-size: 23px;
         white-space: nowrap;
         flex-shrink: 0;
     }
@@ -292,6 +313,9 @@ body {
         height: auto;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        background-position: center 40%;
+        background-size: 35%;
+        background-repeat: no-repeat;
     }
 
     .tab-panel p {
@@ -303,10 +327,7 @@ body {
         font-size: 16px;
         line-height: 1.6;
         white-space: pre-line;
-        background-repeat: no-repeat;
-        background-position: center 40%;
-        background-size: 35%;
-        background-attachment: fixed;
+        background: transparent;
         overflow-y: visible;
         padding-bottom: 20px;
     }
@@ -360,8 +381,8 @@ body {
     }
 
     .top-tabs .tab {
-        padding: 5px 8px;
-        font-size: 12px;
+        padding: 5px 5px;
+        font-size: 15px;
     }
 
     .tab-panel {
