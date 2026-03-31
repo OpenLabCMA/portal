@@ -16,6 +16,7 @@
                 </a>
     </div>
 
+                <!-- USING "hidden" class to hide some tabs for now -->
 
     <nav class="top-tabs" aria-label="Main tabs">
         <div role="tablist" aria-label="Main navigation">
@@ -23,11 +24,11 @@
             <button class="tab" data-tab="guidelines" role="tab" aria-selected="false">Code of Conduct</button>
             <button class="tab" data-tab="staff" role="tab" aria-selected="false">Staff</button>
             <button class="tab" data-tab="projects" role="tab" aria-selected="false">Projects</button>
-            <a class="tab" href="https://github.com/alakouzmin/cma-openlab/" target="_blank" rel="noopener"
-                data-tab="repository">Github Repo</a>
-            <a class="tab" href="https://github.com/alakouzmin/cma-openlab/wiki/Openlab-Wiki" target="_blank"
+            <a class="tab" href="https://github.com/OpenLabCMA/cma-openlab/wiki" target="_blank"
                 rel="noopener" data-tab="wiki">Wiki</a>
-            <a class="tab"
+            <a class="hidden" href="https://github.com/OpenLabCMA/cma-openlab/" target="_blank" rel="noopener"
+                data-tab="repository">Github Repo</a>
+            <a class="hidden"
                 href="https://docs.google.com/spreadsheets/d/1IwN4VrU-hbiJxZQ7BlM7I72yAnsFbIkCd6pqrpBkBpg/edit?usp=sharing"
                 target="_blank" rel="noopener" data-tab="inventory">Inventory</a>
         </div>
@@ -41,47 +42,53 @@
                 explore. Think of it as a classroom, makerspace, art studio, tinkering workshop, and social hub all under one
                 roof open 24/7.
 
-                To get started read our code of conduct and check our wiki page for the introduction of the lab's facilities.
+                To get started read our <a href="#" onclick="window.activateTab('guidelines'); return false;">code of conduct</a> and check our <a href="https://github.com/OpenLabCMA/cma-openlab/wiki" target="_blank" rel="noopener">wiki</a> page for the introduction of the lab's facilities.
                 We maintain a Github Repository with useful code schematics etc.
                 You can browse the current inventory of lab equipment and materials.
 
 
             </p>
         </section>
-        <section id="guidelinesPanel" class="tab-panel" data-tabpanel="guidelines" hidden>
+        <section id="guidelines" class="tab-panel" data-tabpanel="guidelines" hidden>
             <p>
-                OpenLab Access Agreement
+                <b>OpenLab Access Agreement</b>
                 Location: CMA Lab E2 L3 East End
                 Hours: Open 24/7
 
-                Maintenance and Clean-Up
-                Always allow time to leave the space and equipment in the same condition as you found it.
+                <b>Maintenance and Clean-Up</b>
+                Always leave the space and equipment in the same condition as you found it. 
+                Return tools and materials to their designated storage areas after use. 
+                Turn off all the powered equipment when you are done.
                 Dispose of trash promptly.
-                Store projects in your designated area.
+                Store your projects in the designated area (grab a container and label it).
 
-                Safety
+               <b> Safety </b>
                 Always handle equipment with care and follow the operating instructions.
-                Report any safety hazards or concerns to your course instructors immediately.
+                Use the <a href="https://github.com/OpenLabCMA/cma-openlab/wiki" target="_blank" rel="noopener">wiki</a> to familiarize yourself with the equipment before using it.
+                Report any safety hazards or concerns to your course instructors or the lab manager immediately.
                 Do not leave machines running unattended.
-
-                Use Notes
+                
+                <b>Use Notes</b>
                 Fabric scissors are never to be used with other materials.
-                Pin art into walls using only the thin pins that we show you, and hang less than 300 g.
+                Pin your projects to the walls using only the thin pins that we show you, and hang less than 300 g.
                 It is ok to play the piano.
 
-                Reporting Damaged Equipment
+                <b>Reporting Damaged Equipment</b>
                 If any equipment or supplies are found to be malfunctioning or broken,
                 send a WeChat or email to the Contacts immediately
-                (or use the red button on the OpenLab website).
+                (or use the red button on the OpenLab website to open an issue).
                 Don't be shy, it's ok even if you broke it, just let us know asap.
 
-                Contact
+                <b>Contact</b>
                 Prof. Margaret Minsky
                 Prof. Nicol&#242; Merendino
                 Yuri Kuzmin
 
                 By using the OpenLab you acknowledge that you have read and understood
                 these guidelines. Failure to comply may result in loss of access privileges.
+
+
+
 
             </p>
         </section>
@@ -107,10 +114,10 @@
 
     <script src="script.js?v=2" defer></script>
 
-    <a class="report-btn" href="mailto:margaretm@hkust-gz.edu.cn?subject=OpenLab%20Problem%20Report" aria-label="Report a problem">Report Problem</a>
+    <a class="report-btn" href="https://github.com/OpenLabCMA/cma-openlab/issues" aria-label="Report a problem">Report Problem</a>
 
     <div class="bottom-bar">
-        <img src="" alt="Always Open. HKUST(GZ), E-2, CMA Lab" />
+        <p class="bottom-bar-text">Always Open. HKUST(GZ), E-2, CMA Lab</p>
     </div>
 
 </body>

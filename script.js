@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Position tabs right below the top bar
 		const barRect = topBar.getBoundingClientRect();
-		topTabs.style.top = Math.ceil(barRect.bottom) + 'px';
+		topTabs.style.top = Math.ceil(barRect.bottom) + 10 + 'px';
 
 		// Position panels right below the tabs
 		const tabsRect = topTabs.getBoundingClientRect();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		return turtles[Math.floor(Math.random() * turtles.length)];
 	}
 
-	function activate(id) {
+	window.activateTab = function(id) {
 		tabs.forEach(t => {
 			const isActive = t.dataset.tab === id;
 			t.setAttribute('aria-selected', String(Boolean(isActive)));
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				// Wait for fade-out animation to complete before hiding
 				setTimeout(() => {
 					p.hidden = true;
-				}, 500); // Match the 0.5s transition duration
+				}, 300); // Match the 0.5s transition duration
 			}
 		});
-	}
+	};
 
 	tabs.forEach(t => {
 		t.addEventListener('click', (e) => {
@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (t.tagName !== 'BUTTON') return;
 			const id = t.dataset.tab;
 			if (!id) return;
-			activate(id);
+			window.activateTab(id);
 		});
 	});
 
 	// default: activate introduction if present
 	const defaultTab = tabs.find(t => t.dataset.tab === 'intro');
-	if (defaultTab) activate('intro');
+	if (defaultTab) window.activateTab('intro');
 
 	// position panels after initial render
 	positionElements();

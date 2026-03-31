@@ -29,7 +29,7 @@ body::before {
     inset: 0;
     z-index: var(--z-bg);
     background-size: 118% auto;
-    background-image: linear-gradient(135deg, rgba(177, 190, 229, 0.6), rgba(200, 180, 220, 0.5)), url("./images/hero.png");
+    background-image: linear-gradient(135deg, rgba(177, 190, 229, 0.6), rgba(200, 180, 220, 0.5)), url("./images/hero.jpg");
     background-position: center 35%;
     background-repeat: no-repeat;
     animation: blrFadeIn 1s ease-in forwards;
@@ -125,7 +125,7 @@ body {
     padding: 0;
     z-index: var(--z-panel);
     width: 100%;
-    animation: bgFadeIn 2s ease-in forwards;
+    animation: bgFadeIn 1.5s ease-in forwards;
 }
 
 .tab-panel p {
@@ -216,13 +216,18 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 1%;
+    padding: 0%;
+    padding-left: 1%;
     background: var(--dark-blue);
     color: var(--text-light);
     font-family: var(--font-family);
     z-index: var(--z-top);
+    font-size: 10 px;
 }
 
+.hidden {
+  display: none;
+}
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
@@ -382,5 +387,9 @@ body {
     .bottom-bar {
         padding: 6px;
         min-height: 32px;
+    }
+
+    .hidden {
+    display: none;
     }
 }
