@@ -165,7 +165,7 @@ body {
     box-sizing: border-box;
     position: relative;
     z-index: var(--z-tab-content);
-        transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 
 }
 
@@ -364,6 +364,8 @@ body {
     .tab-panel {
         top: 84px;
         bottom: 40px;
+        background-repeat: no-repeat;
+        background-position: right 50% bottom 50%;
     }
 
     .tab-panel p {
