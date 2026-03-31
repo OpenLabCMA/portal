@@ -303,7 +303,10 @@ body {
         font-size: 16px;
         line-height: 1.6;
         white-space: pre-line;
-        background-image: none !important;
+        background-repeat: no-repeat;
+        background-position: center 40%;
+        background-size: 35%;
+        background-attachment: fixed;
         overflow-y: visible;
         padding-bottom: 20px;
     }
@@ -364,8 +367,7 @@ body {
     .tab-panel {
         top: 84px;
         bottom: 40px;
-        background-repeat: no-repeat;
-        background-position: right 50% bottom 50%;
+
     }
 
     .tab-panel p {
@@ -381,13 +383,13 @@ body {
 
     .report-btn {
         right: 12px;
-        bottom: 48px;
+        bottom: 64px;
         padding: 8px 14px;
         font-size: 13px;
     }
 
     .bottom-bar {
-        padding: 6px;
+        padding: 4px;
         min-height: 32px;
     }
 
