@@ -1,3 +1,3 @@
-# cma-openlab-wiki
+# cma-openlab
 
-temp address: https://openlabcma.github.io/cma-openlab/?version=
+https://openlabcma.github.io/portal/
