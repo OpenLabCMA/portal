@@ -1,3 +1,3 @@
 # cma-openlab
 
-https://openlabcma.github.io/portal/
+OpenLab webpage: https://openlabcma.github.io/portal/
