@@ -129,8 +129,8 @@ body {
     background: none;
     --turtle-image: none;
     background-repeat: no-repeat;
-    background-position: right 2% bottom 50%;
-    background-size: 25%;
+    background-position: right 2% bottom 25%;
+    background-size: 18%;
     background-color: transparent;
 }
 
@@ -212,8 +212,8 @@ body {
 
 .report-btn {
     position: fixed;
-    right: 32px;
-    bottom: 80px;
+    right: 24px;
+    bottom: 70px;
     padding: 14px 22px;
     background: #dc2626;
     color: #fff;
@@ -340,8 +340,8 @@ body {
     }
 
     .report-btn {
-        right: 16px;
-        bottom: 56px;
+        right: 8px;
+        bottom: 54px;
         padding: 10px 16px;
         font-size: 14px;
     }
@@ -403,7 +403,7 @@ body {
     }
 
     .report-btn {
-        right: 12px;
+        right: 8px;
         bottom: 64px;
         padding: 8px 14px;
         font-size: 13px;
